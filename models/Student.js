@@ -4,22 +4,7 @@ const assignmentSchema = require('./Assignment');
 // Schema to create Student model
 const studentSchema = new Schema(
   {
-    first: {
-      type: String,
-      required: true,
-      max_length: 50,
-    },
-    last: {
-      type: String,
-      required: true,
-      max_length: 50,
-    },
-    github: {
-      type: String,
-      required: true,
-      max_length: 50,
-    },
-    assignments: [assignmentSchema],
+    
   },
   {
     toJSON: {
@@ -28,6 +13,5 @@ const studentSchema = new Schema(
   }
 );
 
-const Student = model('student', studentSchema);
 
 module.exports = Student;
